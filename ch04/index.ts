@@ -1,5 +1,7 @@
 import { generate } from 'rxjs';
 
-generate({
-  // init
+const res = generate({
+  initialState: 'x',
+  
+
 });
