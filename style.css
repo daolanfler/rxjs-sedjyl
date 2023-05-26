@@ -36,16 +36,16 @@ p {
   height: 100px;
 }
 
-code {
+/* code {
   color: var(--code-base);
-}
+} */
 
 .callout {
   color: var(--callout);
 }
-
+/* 
 pre {
   background-color: #15181e;
   padding: 10px;
   color: var(--code-base);
-}
+} */
