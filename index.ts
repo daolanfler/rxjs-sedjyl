@@ -8,4 +8,6 @@ import './style.css';
 
 // import './examples/multiple-observer';
 
-import './ch02/index';
+// import './ch02/index';
+
+import './ch04/index';
