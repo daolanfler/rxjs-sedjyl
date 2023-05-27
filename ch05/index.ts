@@ -1,4 +1,12 @@
 // import './merge';
 // import './zip';
 // import './combineLatest';
-import './withLatestFrom';
+// import './withLatestFrom';
+// import './startWith'
+// import "./forkJoin"
+
+// import './higher-order'
+// import './higher-order/concatAll';
+// import './higher-order/mergeAll';
+// import './higher-order/zipAll';
+import './higher-order/combineLatestAll'

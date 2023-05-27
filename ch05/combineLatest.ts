@@ -18,3 +18,5 @@ const result$ = combineLatest(source$1, source$2);
 result$.subscribe(console.log, null, () => {
   console.log('complete');
 });
+
+
