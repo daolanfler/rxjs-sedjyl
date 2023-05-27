@@ -12,4 +12,6 @@ import './style.css';
 
 // import './ch04/index';
 
-import './ch05/index'
+// import './ch05/index'
+
+import './ch06/index'
