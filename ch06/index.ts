@@ -1,2 +1,3 @@
 // import './count'
-import './math';
+// import './math';
+import './predicate'
