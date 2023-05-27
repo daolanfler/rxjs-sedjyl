@@ -9,4 +9,5 @@
 // import './higher-order/concatAll';
 // import './higher-order/mergeAll';
 // import './higher-order/zipAll';
-import './higher-order/combineLatestAll'
+// import './higher-order/combineLatestAll'
+import './higher-order/switch'
