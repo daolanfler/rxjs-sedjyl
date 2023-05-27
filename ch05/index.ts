@@ -10,4 +10,5 @@
 // import './higher-order/mergeAll';
 // import './higher-order/zipAll';
 // import './higher-order/combineLatestAll'
-import './higher-order/switch'
+// import './higher-order/switchAll'
+import './higher-order/exhaustAll';
