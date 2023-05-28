@@ -131,7 +131,7 @@ function addDot(x: number, y: number) {
 
   return animationFrames().pipe(
     // Only take animation frames for 1 second.
-    takeWhile(({ elapsed }) => elapsed < 1000),
+    takeWhile(({ elapsed }) => elapsed &lt; 1000),
 
     // Set the position on the dot as a side-effect.
     tap({
