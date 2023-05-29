@@ -6,6 +6,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "mitt": "^3.0.0",
     "rxjs": "latest"
   },
   "devDependencies": {
