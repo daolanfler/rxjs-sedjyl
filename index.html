@@ -20,10 +20,12 @@
     <button id="sample">Sample</button>
 
     <header>
-      <img
-        src="https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png"
-        class="logo"
-      />
+      <div id="logo">
+        <img
+          src="https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png"
+          class="logo"
+        />
+      </div>
       <h1>RxJS Playground</h1>
     </header>
     <article>
@@ -173,8 +175,8 @@ function addDot(x: number, y: number) {
       }
 
       document
-        .querySelectorAll('pre')
-        .forEach((pre) => pre.addEventListener('click', selectCode));
+        .querySelectorAll("pre")
+        .forEach((pre) => pre.addEventListener("click", selectCode));
     </script>
   </body>
 </html>

@@ -5,4 +5,10 @@
 // import './buffer-window-count'
 // import './buffer-window-when'
 // import './buffer-window-toggle'
-import './buffer-window'
+// import './buffer-window'
+
+// import './higher-order-map/concatMap'
+// import './higher-order-map/mergeMap'
+// import './higher-order-map/switchMap'
+// import './higher-order-map/exhaustMap'
+import './higher-order-map/expand'

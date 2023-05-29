@@ -1,0 +1,12 @@
+#logo {
+    position: absolute;    
+    z-index: 100;
+    top: 200px;
+    left: 100px;
+    cursor: move;
+}
+
+#logo .logo {
+    /* div 内部如果有 img 要设置一下 */
+    pointer-events: none; 
+}
