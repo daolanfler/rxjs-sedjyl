@@ -1,29 +1,48 @@
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject, Subject, interval, share, take, tap } from "rxjs";
 
-const subject1 = new BehaviorSubject(100);
+const interval$ = interval(1000).pipe(
+  take(3),
+  tap((x) => {
+    console.log("source ", x);
+  })
+);
 
-subject1.next(1);
-subject1.next(2);
-subject1.next(3);
-// BehaviorSubject 在接收到订阅时会吐出上一个数据，所以需要传入一个 default 值
+const result$1 = interval$.pipe(
+  share({
+    connector: () => new BehaviorSubject(100),
+    resetOnComplete: false, // with this set to false, new subscription will not start the tick
+  })
+);
+
 setTimeout(() => {
-  subject1.subscribe((n) => {
-    console.log(n);
+  result$1.subscribe({
+    next: (val) => console.log(val),
+    complete: () => {
+      console.log("share BehaviorSubject complete");
+    },
   });
-}, 1000)
+}, 5000);
+
+result$1.subscribe({
+  next: (val) => console.log(val),
+  complete: () => {
+    console.log("share BehaviorSubject complete");
+  },
+});
 
 
-const subject2 =  new Subject();
 
-const subscription2_1 = subject2.subscribe((str) => {
-    console.log("observer1", str)
+
+/** ---------- divide -------------- */
+
+const result$2 = interval$.pipe(share({
+  connector: () => new Subject(),
+  resetOnComplete: false
+}));
+
+result$2.subscribe({
+  next: (val) => console.log("subject", val),
+  complete: () => {
+    console.log("share Subject complete");
+  }
 })
-
-subject2.next('subject2 next 1')
-
-// subscription2_1.unsubscribe()
-// Subject 则不同，从最新的值开始取
-subject2.subscribe((str) => {
-  console.log('observer2', str)
-})
-subject2.next('subject2 next 2')

@@ -1,22 +1,33 @@
-import { from } from "rxjs";
+import { from, tap } from "rxjs";
 
+// Hot, fromPromise 实现很简单， promise 本身就自带状态
 const source$ = from(
-  // Promise.resolve().then(() => {
-  //   console.log('resolved');
-  // })
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("hello")
-    }, 1000)
+      console.log("creating promise");
+      resolve("hello");
+    }, 1000);
   })
 );
 
 setTimeout(() => {
-  source$.subscribe((str) => {
-    console.log('shit after 2s', str)
-  })
-}, 2000)
+  const subscription = source$.subscribe({
+    next: (str) => {
+      console.log("after 2s - observer2: ", str);
+    },
+    complete: () => {
+      console.log("complete 2");
+    },
+  });
+  // unsubscibe 之后，subscription 就无效了，（我打了句废话）
+  subscription.unsubscribe()
+}, 2000);
 
-source$.subscribe((str) => {
-  console.log('shit', str)
-})
+source$.subscribe({
+  next: (str) => {
+    console.log("observer1: ", str);
+  },
+  complete: () => {
+    console.log("complete 1");
+  },
+});
