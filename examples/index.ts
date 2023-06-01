@@ -4,4 +4,6 @@
 
 // import './multiple-observer' // interval 是 cold Observable
 
-import './dummy'
+// import './dummy'
+
+// import "./capture"
