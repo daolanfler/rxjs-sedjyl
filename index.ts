@@ -2,7 +2,7 @@ import './style.css';
 
 // uncomment one to see the examples
 
-import './examples';
+// import './examples';
 
 // import './examples/from-promise';
 
@@ -26,3 +26,5 @@ import './examples';
 // import './ch10/index' // mutlicast
 
 // import "./ch11/index" // scheduler
+
+import './ch12/index'

@@ -18,6 +18,9 @@
     <div id="text"></div>
     <button id="clickMe">click me</button>
     <button id="sample">Sample</button>
+    <div id="myDiv">
+      <button id="myButton">Click me!</button>
+    </div>
 
     <header>
       <div id="logo">
@@ -177,6 +180,18 @@ function addDot(x: number, y: number) {
       document
         .querySelectorAll("pre")
         .forEach((pre) => pre.addEventListener("click", selectCode));
+
+      // let myDiv = document.getElementById("myDiv");
+      // let myButton = document.getElementById("myButton");
+
+      // /** useCapture 默认为 false, 可以看到 log 的先后顺序不同 */
+      // myDiv.addEventListener("click", function () {
+      //   console.log("Div was clicked!");
+      // }, true);
+
+      // myButton.addEventListener("click", function (event) {
+      //   console.log("Button was clicked!");
+      // });
     </script>
   </body>
 </html>
