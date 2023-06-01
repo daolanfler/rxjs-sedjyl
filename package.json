@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "test": "TS_NODE_PROJECT=./ch12/tsconfig.json mocha --config ch12/.mocharc.jsonc"
+    "test": "TS_NODE_PROJECT=./ch12/tsconfig.json mocha --config ch12/.mocharc.jsonc --watch"
   },
   "dependencies": {
     "mitt": "^3.0.0",
