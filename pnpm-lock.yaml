@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  lodash:
+    specifier: ^4.17.21
+    version: registry.npmmirror.com/lodash@4.17.21
   mitt:
     specifier: ^3.0.0
     version: registry.npmmirror.com/mitt@3.0.0
@@ -12,6 +15,9 @@ devDependencies:
   '@types/chai':
     specifier: ^4.3.5
     version: registry.npmmirror.com/@types/chai@4.3.5
+  '@types/lodash':
+    specifier: ^4.14.195
+    version: registry.npmmirror.com/@types/lodash@4.14.195
   '@types/mocha':
     specifier: ^10.0.1
     version: registry.npmmirror.com/@types/mocha@10.0.1
@@ -345,6 +351,12 @@ packages:
     resolution: {integrity: sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/chai/-/chai-4.3.5.tgz}
     name: '@types/chai'
     version: 4.3.5
+    dev: true
+
+  registry.npmmirror.com/@types/lodash@4.14.195:
+    resolution: {integrity: sha512-Hwx9EUgdwf2GLarOjQp5ZH8ZmblzcbTBC2wtQWNKARBSxM9ezRIAUpeDTgoQRAFB0+8CNWXVA9+MaSOzOF3nPg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.195.tgz}
+    name: '@types/lodash'
+    version: 4.14.195
     dev: true
 
   registry.npmmirror.com/@types/mocha@10.0.1:
@@ -968,7 +980,6 @@ packages:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz}
     name: lodash
     version: 4.17.21
-    dev: true
 
   registry.npmmirror.com/log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/log-symbols/-/log-symbols-4.1.0.tgz}
