@@ -8,6 +8,7 @@ import {
   switchMap,
 } from "rxjs";
 import { createApp, ref } from "vue/dist/vue.esm-browser.js";
+import { searchRepo2$ } from "./search";
 
 const body = document.querySelector("body") as HTMLBodyElement;
 const firstChild = body.firstChild;
@@ -71,7 +72,16 @@ const fetchApi = (url: string) => {
     });
 };
 
-searchRepo$(createKeyup$()).subscribe((result) => {
+searchRepo2$(
+  createKeyup$(),
+  (query) =>
+    from(
+      fetchApi(
+        `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc`
+      )
+    ),
+  400
+).subscribe((result) => {
   const ul = document.querySelector("#results") as HTMLUListElement;
   ul.innerHTML = result.items
     .map((repo: any) => {
