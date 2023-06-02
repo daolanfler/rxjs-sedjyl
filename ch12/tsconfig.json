@@ -2,6 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./spec/**/*.ts", "./src/**/*.ts"],
   "ts-node": {

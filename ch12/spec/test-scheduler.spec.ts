@@ -11,7 +11,6 @@ import {
   take,
   throwError,
 } from "rxjs";
-import { observableMatcher } from "./helpers/observableMatcher";
 
 let scheduler: TestScheduler;
 
@@ -20,7 +19,7 @@ const addDrama = (x: number | string) => x + "!";
 
 describe("Observable", () => {
   beforeEach(() => {
-    scheduler = new TestScheduler(observableMatcher);
+    scheduler = new TestScheduler(assert.deepEqual.bind(assert));
   });
 
   it("should parse marble diagrams", () => {
