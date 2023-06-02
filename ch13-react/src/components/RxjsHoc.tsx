@@ -10,7 +10,7 @@ export function observe<P extends object, T>(
     const props$ = useRef(observableFactory(props, defaultState));
     const [state, setState] = useState<P>();
 
-    console.log("render", state);
+    // console.log("render", state);
 
     useEffect(() => {
       const subscription = props$.current.subscribe((state) => {

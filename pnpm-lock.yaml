@@ -41,6 +41,9 @@ importers:
 
   ch13-react:
     dependencies:
+      lodash-es:
+        specifier: ^4.17.21
+        version: registry.npmmirror.com/lodash-es@4.17.21
       react:
         specifier: ^18.2.0
         version: registry.npmmirror.com/react@18.2.0
@@ -48,6 +51,9 @@ importers:
         specifier: ^18.2.0
         version: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     devDependencies:
+      '@types/lodash-es':
+        specifier: ^4.17.7
+        version: registry.npmmirror.com/@types/lodash-es@4.17.7
       '@types/react':
         specifier: ^18.0.37
         version: registry.npmmirror.com/@types/react@18.0.37
@@ -827,6 +833,20 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/json-schema/-/json-schema-7.0.12.tgz}
     name: '@types/json-schema'
     version: 7.0.12
+    dev: true
+
+  registry.npmmirror.com/@types/lodash-es@4.17.7:
+    resolution: {integrity: sha512-z0ptr6UI10VlU6l5MYhGwS4mC8DZyYer2mCoyysZtSF7p26zOX8UpbrV0YpNYLGS8K4PUFIyEr62IMFFjveSiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.7.tgz}
+    name: '@types/lodash-es'
+    version: 4.17.7
+    dependencies:
+      '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.195
+    dev: true
+
+  registry.npmmirror.com/@types/lodash@4.14.195:
+    resolution: {integrity: sha512-Hwx9EUgdwf2GLarOjQp5ZH8ZmblzcbTBC2wtQWNKARBSxM9ezRIAUpeDTgoQRAFB0+8CNWXVA9+MaSOzOF3nPg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.195.tgz}
+    name: '@types/lodash'
+    version: 4.14.195
     dev: true
 
   registry.npmmirror.com/@types/mocha@10.0.1:
@@ -2388,6 +2408,12 @@ packages:
     dependencies:
       p-locate: registry.npmmirror.com/p-locate@5.0.0
     dev: true
+
+  registry.npmmirror.com/lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
+    name: lodash-es
+    version: 4.17.21
+    dev: false
 
   registry.npmmirror.com/lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.merge/-/lodash.merge-4.6.2.tgz}
