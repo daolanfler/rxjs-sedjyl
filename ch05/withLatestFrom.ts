@@ -40,5 +40,5 @@ const result$ = x$.pipe(
 );
 result$.subscribe((location) => {
   console.log('#render', location);
-  document.querySelector('#text').innerHTML = location;
+  document.querySelector('#text')!.innerHTML = location;
 });
