@@ -4,6 +4,7 @@
     { "path": "./ch12" },
     { "path": "./tsconfig.app.json" },
     { "path": "./ch13-react" },
+    { "path": "./ch14-redux" },
     { "path": "./ch15-breakout" }
   ]
 }
