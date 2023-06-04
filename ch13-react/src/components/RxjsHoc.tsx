@@ -10,8 +10,10 @@ export function observe<P extends object, T>(
     const props$ = useRef(observableFactory(props, defaultState));
     const [state, setState] = useState<P>();
 
+    // TODO 这里会 render 2 次，有解决办法吗?
     // console.log("render", state);
 
+    // useEffect 连接外部数据
     useEffect(() => {
       const subscription = props$.current.subscribe((state) => {
         setState(state);
