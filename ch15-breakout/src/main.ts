@@ -139,7 +139,7 @@ const keys$ = merge(
   )
 ).pipe(distinctUntilChanged());
 
-const PADDLE_SPEED = 240;
+const PADDLE_SPEED = 200;
 
 const createPaddle$ = (
   ticker$: Observable<{
@@ -265,6 +265,9 @@ const createState$ = (ticker$: Observable<Tick>, paddle$: Observable<number>) =>
         }
       });
       collisions.paddle = isHit(paddle, ball);
+      if(collisions.paddle) {
+        ball.position.y = Math.min(ball.position.y, stage.height - PADDLE_HEIGHT - BALL_RADIUS);
+      }
 
       if (
         ball.position.x < BALL_RADIUS ||
@@ -277,6 +280,9 @@ const createState$ = (ticker$: Observable<Tick>, paddle$: Observable<number>) =>
       collisions.ceiling = ball.position.y < BALL_RADIUS;
       if (collisions.ceiling || collisions.brick || collisions.paddle) {
         ball.direction.y = -ball.direction.y;
+      }
+      if (collisions.ceiling) {
+        ball.position.y = Math.max(ball.position.y, BALL_RADIUS);
       }
       return {
         ball,
