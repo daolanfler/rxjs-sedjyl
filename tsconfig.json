@@ -1,4 +1,9 @@
 {
   "files": [],
-  "references": [{ "path": "./ch12" }, { "path": "./tsconfig.app.json" }]
+  "references": [
+    { "path": "./ch12" },
+    { "path": "./tsconfig.app.json" },
+    { "path": "./ch13-react" },
+    { "path": "./ch15-breakout" }
+  ]
 }

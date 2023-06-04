@@ -1,2 +1,3 @@
 packages: 
   - 'ch13-react'
+  - 'ch15-breakout'
